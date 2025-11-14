@@ -1,0 +1,48 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 240 120"
+  role="img"
+  aria-labelledby="rcyLogoTitle"
+>
+  <title id="rcyLogoTitle">Singapore Red Cross Youth NTU</title>
+  <rect width="240" height="120" fill="#ffffff" rx="12" />
+  <rect x="15" y="18" width="150" height="74" rx="8" fill="#e10600" />
+
+  <g
+    fill="#ffffff"
+    font-family="'Helvetica Neue', Arial, sans-serif"
+    font-size="14"
+    font-weight="700"
+    letter-spacing="1.5"
+    text-anchor="start"
+  >
+    <text x="28" y="40">SINGAPORE</text>
+    <text x="28" y="60">RED CROSS</text>
+  </g>
+
+  <text
+    x="28"
+    y="88"
+    fill="#000000"
+    font-family="'Brush Script MT', 'Segoe Script', cursive"
+    font-size="26"
+  >
+    Youth
+  </text>
+  <text
+    x="28"
+    y="106"
+    fill="#000000"
+    font-family="'Helvetica Neue', Arial, sans-serif"
+    font-size="11"
+    letter-spacing="2"
+  >
+    Nanyang Technological University
+  </text>
+
+  <g fill="#e10600">
+    <rect x="186" y="18" width="36" height="36" rx="8" fill="none" />
+    <rect x="189" y="26" width="28" height="20" />
+    <rect x="197" y="18" width="12" height="36" />
+  </g>
+</svg>

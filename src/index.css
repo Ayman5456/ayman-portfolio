@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-canvas text-white font-sans antialiased;
+  }
+
+  ::selection {
+    background-color: #b0102a;
+    color: #ffffff;
+  }
+}
