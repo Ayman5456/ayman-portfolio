@@ -1,0 +1,1 @@
+Temporary file created during debugging. Safe to delete once filesystem permissions allow it.
