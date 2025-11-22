@@ -109,10 +109,10 @@ const reports = [
 
 const experienceTimeline = [
   { org: "Maybank Investment Banking Group", role: "Incoming Global Markets Intern (Quantitative Development)", date: "Upcoming", bullets: ["Working on AI-driven automation using Python and LLMs to structure financial data for trading and restructuring desks.", "Exposure to fixed income, FX, and derivatives while supporting front-office sales and risk teams across ASEAN."] },
-  { org: "Lucror Analytics", role: "Credit Research Intern, European High Yield", date: "Jul 2025 – Present", bullets: ["Build and maintain financial models for high yield issuers, incorporating IFRS adjustments and leverage metrics.", "Draft tear sheets and summarise offering memorandums for institutional investors.", "Use Bloomberg Terminal and S&P Capital IQ to extract financials, trading data, and market intelligence."] },
-  { org: "Archbridge Capital Pte Ltd", role: "Data Analysis Intern", date: "Jun 2025 – Jul 2025", bullets: ["Evaluated credit risk of micro businesses and fed structured datasets into lending models to improve accuracy.", "Designed automated stress testing scenarios in Excel and Python to strengthen portfolio resilience assessments."] },
-  { org: "Maybank Mbassador", role: "Student Ambassador", date: "Mar 2025 – Present", bullets: ["Selected for Maybank's ambassador program focused on leadership, event management, and community engagement.", "Supported ESG and sustainability campaigns, including eco brick initiatives highlighting responsible banking."] },
-  { org: "Nanyang Capital Stock Pitch Competition", role: "Participant", date: "Mar 2025", bullets: ["Built a three-statement Netflix model with revenue drivers, margin projections, and working capital schedules.", "Performed DCF and comparables leading to a buy recommendation backed by intrinsic and relative valuation."] },
+  { org: "Lucror Analytics", role: "Credit Research Intern, European High Yield", date: "Jul 2025 – Present", bullets: ["Build, maintain, and enhance fully-integrated financial models for European HY issuers incorporating IFRS 16 adjustments, capitalisation tables, liquidity runways, leverage metrics, and relative value comps.", "Draft and update tear sheets, earnings notes, and bond offering memorandum (OM) summaries for institutional clients across Europe and APAC", "Conduct deep-dive credit reviews covering refinancing risk, covenant packages, recovery analysis, and primary issuance pricing", "Extract financials, trading data, price curves, and market intelligence using Bloomberg (FA, DES, WATC, EQS, WECO) and S&P Capital IQ", "Build and standardise peer sheets (sales, EBITDA, leverage, liquidity, margins, guidance) using a consolidated modelling framework aligned with senior analysts methodology", "Improve internal workflows by automating ISIN mapping, OM retrieval tracking, and Excel formula consistency across issuers", "Collaborate with senior analysts to prepare investor-facing notes and weekly sector updates"] },
+  { org: "Archbridge Capital Pte Ltd", role: "Data Analysis Intern", date: "Jun 2025 – Jul 2025", bullets: ["Conducted econometric modelling on micro-enterprise credit data to identify key determinants of borrower default risk (e.g., leverage ratios, repayment history, sectoral volatility, seasonality trends)", "Cleaned, merged, and analysed large structured datasets using Python (pandas, NumPy) to improve lending-model accuracy", "Designed automated stress-testing scenarios in Excel & Python to evaluate portfolio resilience under rate shocks, revenue declines, and liquidity squeezes", "Built dashboards summarising portfolio health metrics (PD, LGD, ECL, sector-level dispersion) to support the investment committee", "Assisted in refining internal credit scoring frameworks by testing additional variables and validating model robustness", "Created reporting templates enabling faster underwriting decisions and more consistent risk reviews"] },
+  { org: "Maybank Mbassador", role: "Student Ambassador", date: "Mar 2025 – Present", bullets: ["Selected for Maybank's ambassador program focused on leadership, event management, and community engagement.", "Supported ESG and sustainability campaigns, including eco brick initiatives highlighting responsible banking.", "Facilitated student engagement events, promoting Maybank’s values around responsible banking and community impact"] },
+  { org: "Nanyang Capital Stock Pitch Competition", role: "Runner up", date: "Mar 2025", bullets: ["Built a full 3-statement DCF model including revenue drivers, margin expansion, subscriber growth funnels, churn assumptions, and working-capital schedules", "Performed Comparable Company Analysis (EV/EBITDA, EV/Sales, P/E, PEG) benchmarking Netflix against global streaming peers", "Ran scenario analysis incorporating FX sensitivity, WACC adjustments, and terminal value methodologies (Perpetuity & Exit Multiple)", "Assessed competitive strategy using LTV/CAC, content amortisation patterns, and pricing-power dynamics", "Developed a balanced investment thesis combining macro tailwinds (advertising shift, global penetration) and firm-level catalysts", "Delivered a buy recommendation backed by both intrinsic and relative valuation outputs"] },
   { org: "Singfish Pte Ltd (Notes+)", role: "Marketing Intern", date: "May 2024 – Aug 2024", bullets: ["Drove KOL-led marketing campaigns that boosted Notes+ downloads 1,000% across India/UAE in two months.", "Collaborated on pitching Notes+ to Apple's editorial team, helping secure App Store features."] },
   { org: "High School Moms", role: "Student Mentor", date: "May 2021 – Jun 2021", bullets: ["Supported students with university applications and program selection, simplifying complex choices under pressure."] },
 ];
@@ -203,7 +203,11 @@ function Navigation({ menuOpen, setMenuOpen, onSectionClick }) {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-2xl">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
         <Link to="/" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
-          <div className="h-8 w-8 rounded-full border border-white/40 bg-white/10" />
+          <img
+            src="/nav-avatar.jpg"
+            alt="Ayman Tripathi logo"
+            className="h-8 w-8 rounded-full border border-white/40 object-cover"
+          />
           <span className="text-xs font-semibold uppercase tracking-[0.4em]">
             AT
           </span>
@@ -332,9 +336,9 @@ function HeroSection({ onViewProjects }) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
             <p className="text-sm uppercase tracking-[0.3em] text-white/60">Portrait</p>
-            <p className="mt-3 text-xl font-semibold text-white">Curious mind. Macro storyteller.</p>
+            <p className="mt-3 text-xl font-semibold text-white">BSoSci Economics (Honours)</p>
             <p className="mt-2 text-sm text-white/70">
-              Add your high-contrast portrait to <code className="text-xs">public/ayman-portrait.jpg</code> to replace this placeholder.
+            Yes that's me. Scroll down a bit to know more about me :)
             </p>
           </motion.div>
         </motion.div>
@@ -390,15 +394,15 @@ function AboutSection() {
               </div>
               <div>
                 <p className="text-white/40">Availability</p>
-                <p className="text-lg font-semibold text-white">2025 internships & part-time projects</p>
+                <p className="text-lg font-semibold text-white">Available for internships: Jan – Aug</p>
               </div>
               <div>
                 <p className="text-white/40">Edge</p>
-                <p className="text-lg font-semibold text-white">Macroeconomics × programming</p>
+                <p className="text-lg font-semibold text-white">Macroeconomics × programming · valuation · financial modelling</p>
               </div>
               <div>
                 <p className="text-white/40">Tools</p>
-                <p className="text-lg font-semibold text-white">Python · Excel · VBA · Power BI</p>
+                <p className="text-lg font-semibold text-white">Python · Excel · VBA · Power BI · Bloomberg · Capital IQ</p>
               </div>
             </div>
           </div>
