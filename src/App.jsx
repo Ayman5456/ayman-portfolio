@@ -308,6 +308,7 @@ function HeroSection({ onViewProjects }) {
           </h1>
           <p className="mt-6 text-base text-white/70 sm:text-lg">
             I study Economics at NTU and spend my time connecting macro flows, credit cycles, and policy decisions to real markets. I like building structured views on rates, credit, and FX with models in Python and Excel. Long term, I want to sit where capital is allocated and complex ideas become real transactions.
+            I have created this website using a lot of AI tools—I’m not a proficient web dev. Just wanted to point that out :)
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4 md:justify-start">
@@ -605,10 +606,13 @@ function ContactSection() {
         viewport={{ once: true, amount: 0.4 }}
         className="flex flex-col items-center gap-6 text-center"
       >
-        <Button href="mailto:aymantripathi@gmail.com">Email Me</Button>
+        <Button href="mailto:aymantripathie@gmail.com">Email Me</Button>
+        <p className="text-sm text-white/60">
+          aymantripathie@gmail.com · ayman002@e.ntu.edu.sg
+        </p>
         <div className="flex gap-6 text-sm text-white/70">
           <a
-            href="https://www.linkedin.com/in/aymantripathi"
+            href="https://www.linkedin.com/in/ayman-tripathi-368324213"
             className="transition hover:text-white"
             target="_blank"
             rel="noreferrer"
@@ -616,12 +620,12 @@ function ContactSection() {
             LinkedIn
           </a>
           <a
-            href="https://github.com/Ayman5456"
+            href="https://substack.com/@ayman339960"
             className="transition hover:text-white"
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            Substack
           </a>
         </div>
       </motion.div>
@@ -724,9 +728,6 @@ function Layout() {
           <Route path="/experience" element={<ExperiencePage />} />
         </Routes>
       </main>
-      <footer className="relative z-10 border-t border-white/10 px-6 py-8 text-center text-xs text-white/50">
-        © {new Date().getFullYear()} Ayman Tripathi. Built with React + Tailwind.
-      </footer>
     </div>
   );
 }
