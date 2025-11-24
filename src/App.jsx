@@ -107,6 +107,11 @@ const reports = [
   { title: "Macro view – US rates and consumer credit", date: "Dec 2024", tags: ["Macro", "Rates", "Consumer"], description: "Synthesis of rate expectations, delinquency data, and labour trends shaping my 1H25 outlook." },
 ];
 
+const assetUrl = (path) => {
+  const normalizedPath = path.startsWith("/") ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${normalizedPath}`;
+};
+
 const experienceTimeline = [
   { org: "Maybank Investment Banking Group", role: "Incoming Global Markets Intern (Quantitative Development)", date: "Upcoming", bullets: ["Working on AI-driven automation using Python and LLMs to structure financial data for trading and restructuring desks.", "Exposure to fixed income, FX, and derivatives while supporting front-office sales and risk teams across ASEAN."] },
   { org: "Lucror Analytics", role: "Credit Research Intern, European High Yield", date: "Jul 2025 – Present", bullets: ["Build, maintain, and enhance fully-integrated financial models for European HY issuers incorporating IFRS 16 adjustments, capitalisation tables, liquidity runways, leverage metrics, and relative value comps.", "Draft and update tear sheets, earnings notes, and bond offering memorandum (OM) summaries for institutional clients across Europe and APAC", "Conduct deep-dive credit reviews covering refinancing risk, covenant packages, recovery analysis, and primary issuance pricing", "Extract financials, trading data, price curves, and market intelligence using Bloomberg (FA, DES, WATC, EQS, WECO) and S&P Capital IQ", "Build and standardise peer sheets (sales, EBITDA, leverage, liquidity, margins, guidance) using a consolidated modelling framework aligned with senior analysts methodology", "Improve internal workflows by automating ISIN mapping, OM retrieval tracking, and Excel formula consistency across issuers", "Collaborate with senior analysts to prepare investor-facing notes and weekly sector updates"] },
@@ -204,7 +209,7 @@ function Navigation({ menuOpen, setMenuOpen, onSectionClick }) {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
         <Link to="/" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
           <img
-            src="/nav-avatar.jpg"
+            src={assetUrl("nav-avatar.jpg")}
             alt="Ayman Tripathi logo"
             className="h-8 w-8 rounded-full border border-white/40 object-cover"
           />
@@ -306,7 +311,7 @@ function HeroSection({ onViewProjects }) {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4 md:justify-start">
-            <Button href="/resume.pdf">View Resume</Button>
+            <Button href={assetUrl("resume.pdf")}>View Resume</Button>
             <Button variant="ghost" onClick={onViewProjects}>
               View Projects
             </Button>
@@ -326,7 +331,7 @@ function HeroSection({ onViewProjects }) {
           >
             <div className="relative mb-6 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-accent/20 via-transparent to-white/5">
               <img
-                src="/ayman-portrait.jpg"
+                src={assetUrl("ayman-portrait.jpg")}
                 alt="Portrait of Ayman Tripathi"
                 className="h-72 w-full object-cover"
                 onError={(event) => {
@@ -512,7 +517,7 @@ function BooksSection() {
           >
             <div className="relative mb-5 h-40 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent">
               <img
-                src={`/books/${book.slug}.jpg`}
+                src={assetUrl(`books/${book.slug}.jpg`)}
                 alt={`${book.title} cover`}
                 className="h-full w-full object-cover"
                 onError={(event) => {
