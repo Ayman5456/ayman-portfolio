@@ -518,8 +518,17 @@ function BooksSection() {
             <div className="relative mb-5 h-40 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent">
               <img
                 src={assetUrl(`books/${book.slug}.jpg`)}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover blur-lg opacity-50"
+                aria-hidden="true"
+                onError={(event) => {
+                  event.currentTarget.src = placeholderCover;
+                }}
+              />
+              <img
+                src={assetUrl(`books/${book.slug}.jpg`)}
                 alt={`${book.title} cover`}
-                className="h-full w-full object-cover"
+                className="relative z-10 h-full w-full object-contain"
                 onError={(event) => {
                   event.currentTarget.src = placeholderCover;
                 }}
