@@ -886,7 +886,7 @@ function BooksSection() {
           >
             <div className="relative mb-5 h-40 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent">
               <img
-                src={`/books/${book.slug}.jpg`}
+                src={`${import.meta.env.BASE_URL}books/${book.slug}.jpg`}
                 alt={`${book.title} cover`}
                 className="h-full w-full object-cover"
                 onError={(event) => {
@@ -956,7 +956,7 @@ function ContactSection() {
       id="contact"
       eyebrow="Contact"
       title="Let’s build something intentional"
-      description="Open to research, investment banking, and product roles that value clarity, hustle, and tasteful execution."
+      description="Open to research, investment banking, and product roles that value clarity, hustle, and tasteful execution. Please help me get a job, my university SUCKS and have told me to go piss off and look for jobs myself (not helping at all). I'll take in anything at this point and will work for you for free pls."
     >
       <motion.div
         variants={fadeUp}
